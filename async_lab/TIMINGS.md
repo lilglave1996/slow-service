@@ -56,3 +56,7 @@ under standard CPython.
 Unlike I/O-bound workloads, CPU-bound workloads do
 not benefit significantly from threading in this
 experiment.
+
+## Timeout Trade-Off
+
+The 0.5-second timeout improves responsiveness by limiting how long each request can wait, allowing my experiment to finish in 0.53 seconds instead of 1.05 seconds, but it may discard valid responses that would have arrived after the deadline.
